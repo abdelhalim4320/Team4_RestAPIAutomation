@@ -20,42 +20,45 @@ public class TweetAPIClientTest {
     @Test
     public void testUserCanTweetSuccessfully() {
         // User sent a tweet
-        String tweet = "We are learning Rest API using Rest Assured and our First Tweet"+ UUID.randomUUID().toString();
+        String tweet = "I m learning RestAPI and this is my first tweet" + UUID.randomUUID().toString();
         ValidatableResponse response = this.tweetAPIClient.createTweet(tweet);
-       // System.out.println(response.extract().body().asPrettyString());
+
         // Verify that the tweet is successful
         response.statusCode(200);
         // Verity tweet value
-        String actualTweet=response.extract().body().path("text");
-       // Long id= response.extract().body().path("id");
-        //System.out.println(id);
-        Assert.assertEquals(actualTweet,tweet,"Tweet is not match");
+        String actualTweet = response.extract().body().path("text");
+        Assert.assertEquals(actualTweet, tweet, "Tweet did not match");
+
+        // Print the whole code: very handy and needed a lot
+        // System.out.println(response.extract().body().asPrettyString());
+        // Get id
+        // Long id = response.extract().body().path("id");
+        // System.out.println(id);
     }
 
     @Test
     public void testUserCanNotTweetTheSameTweetTwiceInARow() {
         // User sent a tweet
-        String tweet = "We are learning Rest API using Rest Assured and our First Tweet Same Tweet";
+        String tweet = "This is the first time I tweet using Assured Rest API";
         ValidatableResponse response = this.tweetAPIClient.createTweet(tweet);
         // Verify that the tweet is successful
-       response.statusCode(403);
+        response.statusCode(403);
         // Verity Retweet
         System.out.println(response.extract().body().asPrettyString());
-        String expectedMessage="Status is a duplicate.";
-        String actualTweet=response.extract().body().path("errors[0].message");
-        Assert.assertEquals(actualTweet,expectedMessage,"Tweet is match");
-        Assert.assertNotEquals("403",200);
+        String expectedMessage = "Status is a duplicate.";
+        String actualTweet = response.extract().body().path("errors[0].message");
+        Assert.assertEquals(actualTweet, expectedMessage, "Tweet does not match");
+        Assert.assertNotEquals("403", 200);
     }
 
 
     @Test
-    public void testDeleteTweet(){
-        String tweet="We are learning Rest API using Rest Assured and our First Tweet82d120dd-9045-44f3-a3c9-8720409fae20";
-        ValidatableResponse deleteResponse= this.tweetAPIClient.deleteTweet(1378590700409921541L);
+    public void testDeleteTweet() {
+        String tweet = "I m learning RestAPI and this is my first tweet27d532a0-6b27-4cd7-a31b-dc9ff4bd66fd";
+        ValidatableResponse deleteResponse = this.tweetAPIClient.deleteTweet(1378055885352734725l);
         deleteResponse.statusCode(200);
-        String actualTweet= deleteResponse.extract().body().path("text");
-        Assert.assertEquals(tweet,actualTweet);
-
+        String actualTweet = deleteResponse.extract().body().path("text");
+        Assert.assertEquals(tweet, actualTweet);
     }
 
 
@@ -63,6 +66,7 @@ public class TweetAPIClientTest {
     public void testResponseTime() {
         ValidatableResponse response = this.tweetAPIClient.responseTime();
     }
+
     @Test(enabled = false)
     public void testHeaderValue() {
         this.tweetAPIClient.headerValue();
@@ -71,19 +75,55 @@ public class TweetAPIClientTest {
     @Test(enabled = false)
     public void testPropertyFromResponse() {
         //1. User send a tweet
-        String tweet = "We are learning Rest API Automation with WeekdaysEvening_Selenium_NY_Summer2020" + UUID.randomUUID().toString();
+        String tweet = "I am verifying property from response" + UUID.randomUUID().toString();
         ValidatableResponse response = this.tweetAPIClient.createTweet(tweet);
-        //2. Verify that the tweet was successful:
-        // response.statusCode(200);
+        //2. Verify that the tweet was successful
+        response.statusCode(200);
 
-        //this.tweetAPIClient.checkProperty();
-        //JsonPath pathEvaluator=response.;
-        //System.out.println(response.extract().body().asPrettyString());
         System.out.println(response.extract().body().asPrettyString().contains("id"));
 
-        //String actualTweet = response.extract().body().path("text");
-        //Assert.assertEquals(actualTweet, tweet, "Tweet is not match");
+        String actualTweet = response.extract().body().path("text");
+        Assert.assertEquals(actualTweet, tweet, "Tweet did not not match");
     }
+
+    @Test(enabled = false)
+    public void testGetAccountSettings(){
+        ValidatableResponse response = this.tweetAPIClient.getAccountSettings();
+        System.out.println(response.extract().body().asPrettyString());
+        String expectedTwitterProfile = "LKhemouche";
+        String actualTweeterProfile = response.extract().body().path("screen_name");
+        Assert.assertEquals(actualTweeterProfile, expectedTwitterProfile, "Tweeter profile did not not match");
+    }
+
+    @Test(enabled = false)
+    public void testPostLanguage(){
+        String expectedLanguage = "en";
+        ValidatableResponse response = this.tweetAPIClient.getAccountSettings();
+        System.out.println(response.extract().body().asPrettyString());
+        String actualLanguage = response.extract().body().path("language");
+        Assert.assertEquals(actualLanguage, expectedLanguage, "Post did not not match");
+    }
+
+    @Test(enabled = false)
+    public void testSearchTweets(){
+        String expectedTweet = "I am verifying property from response82115ed8-5fc5-4e67-b893-8829708beed5";
+        ValidatableResponse response = this.tweetAPIClient.getSearchTweets(1378098132874055681l);
+        System.out.println(response.extract().body().asPrettyString());
+        String actualTweet = response.extract().body().path("text");
+        Assert.assertEquals(actualTweet, expectedTweet, "Tweet did not not match");
+    }
+
+    @Test(enabled = true)
+    public void testGetName(){
+        String expectedName = "Lyes Khemouche";
+        ValidatableResponse response = this.tweetAPIClient.getSearchTweets(1378098132874055681l);
+        System.out.println(response.extract().body().asPrettyString());
+        String actualName = response.extract().body().path("user.name");
+        Assert.assertEquals(actualName, expectedName, "Name did not not match");
+    }
+
+
+
 
 
 

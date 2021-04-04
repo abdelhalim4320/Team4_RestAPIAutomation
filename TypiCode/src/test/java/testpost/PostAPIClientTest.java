@@ -13,19 +13,19 @@ public class PostAPIClientTest {
     private PostsAPIClient postsAPIClient;
 
     @BeforeClass
-    public void setUpPostsAPI(){
-        this.postsAPIClient=new PostsAPIClient();
+    public void setUpPostsAPI() {
+        this.postsAPIClient = new PostsAPIClient();
     }
+
     @Test
-    public void testGetAllPosts(){
-        ValidatableResponse response=this.postsAPIClient.getAllPosts();
+    public void testGetAllPosts() {
+        ValidatableResponse response = this.postsAPIClient.getAllPosts();
         response.statusCode(HttpStatus.SC_OK);
     }
 
-    // write a test that creates a post
     @Test
     public void testUserCanCreateAPostUsingPojoSuccessfully() {
-        PostPojo obj = new PostPojo(11, 101, "test title", "test body");
+        PostPojo obj = new PostPojo(1, 101, "test title", "test body");
         ValidatableResponse response = this.postsAPIClient.createPost(obj);
         response.statusCode(HttpStatus.SC_CREATED);
     }
@@ -51,6 +51,31 @@ public class PostAPIClientTest {
         Assert.assertEquals(actualTitle, title);
         Assert.assertEquals(actualBody, body);
     }
+
+    @Test
+    public void testUserCanGetPostsUsingId() {
+        ValidatableResponse response = this.postsAPIClient.getAllPostsId();
+        response.statusCode(HttpStatus.SC_OK);
+    }
+
+    @Test
+    public void testDeletePost() {
+        ValidatableResponse response = this.postsAPIClient.deletePost(1);
+        response.statusCode(HttpStatus.SC_OK);
+    }
+
+    @Test
+    public void testUserCanPutAPostUsingPojoSuccessfully() {
+        PostPojo obj = new PostPojo(1, 1, "update title", "update body");
+        ValidatableResponse response = this.postsAPIClient.putPost(obj);
+        response.statusCode(HttpStatus.SC_OK);
+    }
+
+
+
+
+
+
 
 
 }
