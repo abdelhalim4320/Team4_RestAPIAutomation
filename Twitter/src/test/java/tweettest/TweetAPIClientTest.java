@@ -16,10 +16,11 @@ public class TweetAPIClientTest {
     public void setUpTweetAPI() {
         this.tweetAPIClient = new TweetAPIClient();
     }
+    // hello
 
     @Test
     public void testUserCanTweetSuccessfully() {
-        // User sent a tweet
+        // User sent a tweet tweet
         String tweet = "We are learning Rest API using Rest Assured and our First Tweet"+ UUID.randomUUID().toString();
         ValidatableResponse response = this.tweetAPIClient.createTweet(tweet);
        // System.out.println(response.extract().body().asPrettyString());
