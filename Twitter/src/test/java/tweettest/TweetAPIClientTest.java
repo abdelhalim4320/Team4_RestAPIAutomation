@@ -73,7 +73,7 @@ public class TweetAPIClientTest {
         //1. User send a tweet
         String tweet = "We are learning Rest API Automation with WeekdaysEvening_Selenium_NY_Summer2020" + UUID.randomUUID().toString();
         ValidatableResponse response = this.tweetAPIClient.createTweet(tweet);
-        //2. Verify that the tweet was successful
+        //2. Verify that the tweet was successful:
         // response.statusCode(200);
 
         //this.tweetAPIClient.checkProperty();
