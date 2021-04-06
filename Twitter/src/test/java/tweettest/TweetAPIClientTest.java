@@ -83,9 +83,7 @@ public class TweetAPIClientTest {
         //JsonPath pathEvaluator=response.;
         //System.out.println(response.extract().body().asPrettyString());
         System.out.println(response.extract().body().asPrettyString().contains("id"));
-
         //String actualTweet = response.extract().body().path("text");
-        //Assert.assertEquals(actualTweet, tweet, "Tweet is not match");
         //Assert.assertEquals(actualTweet, tweet, "Tweet is not match");
     }
 
