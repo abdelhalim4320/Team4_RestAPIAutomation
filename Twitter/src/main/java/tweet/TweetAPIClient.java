@@ -36,7 +36,7 @@ public class TweetAPIClient extends RestAPI {
                 .when().post(this.baseUrl+this.DELETE_TWEET_ENDPOINT).then().statusCode(200);
     }
 
-
+// azul
     // Response Time check
     public ValidatableResponse responseTime(){
         System.out.println(given().auth().oauth(this.apiKey,this.apiSecretKey, this.accessToken,this.accessTokenSecret)
