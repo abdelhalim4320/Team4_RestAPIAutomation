@@ -23,7 +23,7 @@ public class TweetAPIClientTest {
     @Test
     public void testUserCanTweetSuccessfully() {
         // User sent a tweet tweet
-        String tweet = "We are learning Rest API using Rest Assured and our First Tweet"+ UUID.randomUUID().toString();
+        String tweet = "This is my first tweet"+ UUID.randomUUID().toString();
         ValidatableResponse response = this.tweetAPIClient.createTweet(tweet);
        // System.out.println(response.extract().body().asPrettyString());
         // Verify that the tweet is successful
@@ -38,7 +38,7 @@ public class TweetAPIClientTest {
     @Test
     public void testUserCanNotTweetTheSameTweetTwiceInARow() {
         // User sent a tweet
-        String tweet = "We are learning Rest API using Rest Assured and our First Tweet Same Tweet";
+        String tweet = "second tweet";
         ValidatableResponse response = this.tweetAPIClient.createTweet(tweet);
         // Verify that the tweet is successful
        response.statusCode(403);
@@ -53,8 +53,8 @@ public class TweetAPIClientTest {
 
     @Test
     public void testDeleteTweet(){
-        String tweet="We are learning Rest API using Rest Assured and our First Tweet82d120dd-9045-44f3-a3c9-8720409fae20";
-        ValidatableResponse deleteResponse= this.tweetAPIClient.deleteTweet(1378590700409921541L);
+        String tweet="This is my first tweetf2ff132c-5170-4170-97f3-23783e378cdd";
+        ValidatableResponse deleteResponse= this.tweetAPIClient.deleteTweet(1379270461675208706L);
         deleteResponse.statusCode(200);
         String actualTweet= deleteResponse.extract().body().path("text");
         Assert.assertEquals(tweet,actualTweet);
@@ -85,6 +85,7 @@ public class TweetAPIClientTest {
         System.out.println(response.extract().body().asPrettyString().contains("id"));
 
         //String actualTweet = response.extract().body().path("text");
+        //Assert.assertEquals(actualTweet, tweet, "Tweet is not match");
         //Assert.assertEquals(actualTweet, tweet, "Tweet is not match");
     }
 
