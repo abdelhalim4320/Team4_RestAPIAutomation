@@ -14,6 +14,10 @@ public class TweetAPIClient extends RestAPI {
     private final String CREATE_TWEET_ENDPOINT="/statuses/update.json";
     private final String DELETE_TWEET_ENDPOINT="/statuses/destroy.json";
     private final String GET_USER_TWEET_ENDPOINT="/statuses/home_timeline.json";
+    private final String POST_FAVORITE_TWEET_ENDPOINT="/favorites/create.json";
+    private final String POST_RETWEET_ENDPOINT="/statuses/retweet.json";
+    private final String POST_undoRETWEET_ENDPOINT="/statuses/unretweet.json";
+
 
     // GET all Tweet Information
     public ValidatableResponse getUserTimeTweet(){
@@ -63,7 +67,28 @@ public class TweetAPIClient extends RestAPI {
         String createdAt=pathEvaluator.get("id");
         System.out.println(createdAt);
     }
+    // Create_post favorite
+    public ValidatableResponse postFavorite(long id){
+        return given().auth().oauth(this.apiKey,this.apiSecretKey, this.accessToken,this.accessTokenSecret)
+                .param("id",id)
+                .when().post(this.baseUrl+this.POST_FAVORITE_TWEET_ENDPOINT)
+                .then();
+    }
+    // Create_post retweet
+    public ValidatableResponse postRetweet(long id){
+        return given().auth().oauth(this.apiKey,this.apiSecretKey, this.accessToken,this.accessTokenSecret)
+                .param("id",id)
+                .when().post(this.baseUrl+this.POST_RETWEET_ENDPOINT)
+                .then();
+    }
 
+    // Create_post unretweet
+    public ValidatableResponse unRetweet(long id){
+        return given().auth().oauth(this.apiKey,this.apiSecretKey, this.accessToken,this.accessTokenSecret)
+                .param("id",id)
+                .when().post(this.baseUrl+this.POST_undoRETWEET_ENDPOINT)
+                .then();
+    }
 
     // OAuth
     // https://www.programcreek.com/java-api-examples/?api=com.github.scribejava.core.model.OAuthRequest

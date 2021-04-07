@@ -87,6 +87,54 @@ public class TweetAPIClientTest {
         //Assert.assertEquals(actualTweet, tweet, "Tweet is not match");
     }
 
+    @Test
+    public void TESTPostFavoriteTweet() {
+        // User sent a tweet tweet
+        long id=1379271364868198400l;
+        ValidatableResponse response = this.tweetAPIClient.postFavorite(id);
+        System.out.println(response.extract().body().asPrettyString());
+
+
+//        // Verify that the tweet is successful
+//        response.statusCode(200);
+//        // Verity tweet value
+//        String actualTweet=response.extract().body().path("text");
+//        // Long id= response.extract().body().path("id");
+//        //System.out.println(id);
+//        Assert.assertEquals(actualTweet,tweet,"Tweet is not match");
+    }
+    @Test
+    public void testRetweet() {
+        // User sent a tweet tweet
+        long id=1379271364868198400l;
+        ValidatableResponse response = this.tweetAPIClient.postRetweet(id);
+        System.out.println(response.extract().body().asPrettyString());
+
+
+//        // Verify that the tweet is successful
+//        response.statusCode(200);
+//        // Verity tweet value
+//        String actualTweet=response.extract().body().path("text");
+//        // Long id= response.extract().body().path("id");
+//        //System.out.println(id);
+//        Assert.assertEquals(actualTweet,tweet,"Tweet is not match");
+    }
+    @Test
+    public void testunRetweet() {
+        // User sent a tweet tweet
+        long id=1379271364868198400l;
+        ValidatableResponse response = this.tweetAPIClient.unRetweet(id);
+        System.out.println(response.extract().body().asPrettyString());
+
+
+//        // Verify that the tweet is successful
+//        response.statusCode(200);
+//        // Verity tweet value
+//        String actualTweet=response.extract().body().path("text");
+//        // Long id= response.extract().body().path("id");
+//        //System.out.println(id);
+//        Assert.assertEquals(actualTweet,tweet,"Tweet is not match");
+    }
 
 
 }
