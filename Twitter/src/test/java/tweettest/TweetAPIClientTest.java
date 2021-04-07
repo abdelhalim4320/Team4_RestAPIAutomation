@@ -6,6 +6,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import tweet.TweetAPIClient;
 
+import java.io.FileNotFoundException;
 import java.util.UUID;
 
 public class TweetAPIClientTest {
@@ -162,6 +163,15 @@ public class TweetAPIClientTest {
         response.statusCode(200);
         String actualTweet= response.extract().body().path("[0].text");
         Assert.assertEquals(tweet,actualTweet);
+
+    }
+    @Test
+    public void testDirectMessage() throws FileNotFoundException {
+        ValidatableResponse response = this.tweetAPIClient.postDirectMessages();
+        response.statusCode(200);
+//        System.out.println(response.extract().body().asPrettyString());
+//        String actualTweet= response.extract().body().path("[0].text");
+//        Assert.assertEquals(tweet,actualTweet);
 
     }
 }
