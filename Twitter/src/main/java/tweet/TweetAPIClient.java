@@ -17,7 +17,7 @@ public class TweetAPIClient extends RestAPI {
     private final String POST_FAVORITE_TWEET_ENDPOINT="/favorites/create.json";
     private final String POST_RETWEET_ENDPOINT="/statuses/retweet.json";
     private final String POST_undoRETWEET_ENDPOINT="/statuses/unretweet.json";
-
+    private final String GET_TIMELINE_TWEET_ENDPOINT="/statuses/home_timeline.json";
 
     // GET all Tweet Information
     public ValidatableResponse getUserTimeTweet(){
@@ -90,14 +90,11 @@ public class TweetAPIClient extends RestAPI {
                 .then();
     }
 
-    // OAuth
-    // https://www.programcreek.com/java-api-examples/?api=com.github.scribejava.core.model.OAuthRequest
-
-
-
-// https://developer.twitter.com/en/docs/twitter-api/v1/tweets/post-and-engage/overview
-
-    // https://api.twitter.com/1.1/statuses/update.json
+    // GET all Tweet Information
+    public ValidatableResponse getTimeLine(){
+        return given().auth().oauth(this.apiKey,this.apiSecretKey,this.accessToken,this.accessTokenSecret)
+                .when().get(this.baseUrl+this.GET_USER_TWEET_ENDPOINT).then().statusCode(200);
+    }
 
 
 }
