@@ -19,7 +19,7 @@ public class TweetAPIClientTest {
     }
     // hello
 
-    //************ azul
+    //************
 
     @Test
     public void testUserCanTweetSuccessfully() {
@@ -87,6 +87,7 @@ public class TweetAPIClientTest {
     public void testHeaderValue() {
         this.tweetAPIClient.headerValue();
     }
+
 
     @Test(enabled = false)
     public void testPropertyFromResponse() {
@@ -161,10 +162,11 @@ public class TweetAPIClientTest {
         ValidatableResponse response = this.tweetAPIClient.getTimeLine();
 //        System.out.println(response.extract().body().asPrettyString());
         response.statusCode(200);
-        String actualTweet= response.extract().body().path("[0].text");
-        Assert.assertEquals(tweet,actualTweet);
+        String actualTweet = response.extract().body().path("[0].text");
+        Assert.assertEquals(tweet, actualTweet);
 
     }
+
     @Test
     public void testDirectMessage() throws FileNotFoundException {
         ValidatableResponse response = this.tweetAPIClient.postDirectMessages();
@@ -174,4 +176,129 @@ public class TweetAPIClientTest {
 //        Assert.assertEquals(tweet,actualTweet);
 
     }
+
+    @Test
+    public void testFriendsList() throws FileNotFoundException {
+        String screenName= "Trevor Bedford";
+        ValidatableResponse response = this.tweetAPIClient.getFriendsList();
+
+        response.statusCode(200);
+        System.out.println(response.extract().body().asPrettyString());
+        String actualTweet= response.extract().body().path("[0].text");
+        Assert.assertEquals(screenName,actualTweet);
+    }
+    @Test
+    public void testPostList(){
+        String screenName="lamia";
+        ValidatableResponse response = this.tweetAPIClient.createFreindList(screenName);
+        System.out.println(response.extract().body().asPrettyString());
+        int expectedList = 85;
+        int actualList = response.extract().body().path("errors[0].code");
+        Assert.assertEquals(actualList,expectedList,"screen name doesn't match");
+
+    }
+    @Test
+    public void testPostListSubscriber(){
+        ValidatableResponse response = this.tweetAPIClient.createListSubscriber(1380555916140015624l);
+        System.out.println(response.extract().body().asPrettyString());
+        int expectedList = 34;
+        int actualList = response.extract().body().path("errors[0].code");
+        Assert.assertEquals(actualList,expectedList,"screen name doesn't match");
+    }
+
+    @Test
+    public void testGetListSubscriber(){
+        ValidatableResponse response = this.tweetAPIClient.getListSubscriber(1380555916140015624l);
+        System.out.println(response.extract().body().asPrettyString());
+        int expectedList = 112;
+        int actualList = response.extract().body().path("errors[0].code");
+        Assert.assertEquals(actualList,expectedList,"screen name doesn't match");
+    }
+
+    @Test
+    public void testStatusFilter() {
+        ValidatableResponse response = this.tweetAPIClient.getFilter();
+    }
+
+    @Test
+    public void testStatusSimple() {
+        ValidatableResponse response = this.tweetAPIClient.getStatuesSimple();
+    }
+
+    @Test
+    public void testCollectionEntries() {
+        ValidatableResponse response = this.tweetAPIClient.getCollectionsEntries("1380400560596193282");
+    }
+
+    @Test
+    public void testCreateMessage() throws FileNotFoundException {
+        ValidatableResponse response = this.tweetAPIClient.createMessage();
+        response.statusCode(200);
+        System.out.println(response.extract().body().asPrettyString());
+    }
+
+    @Test
+    public void testCreateSecondMessage() throws FileNotFoundException {
+        ValidatableResponse response = this.tweetAPIClient.createSecondMessage();
+        response.statusCode(200);
+        System.out.println(response.extract().body().asPrettyString());
+    }
+
+    @Test
+    public void testAccountSetting() {
+        ValidatableResponse response = this.tweetAPIClient.getAccountSetting();
+        response.statusCode(200);
+    }
+
+    @Test
+    public void testAccountVerify() {
+        ValidatableResponse response = this.tweetAPIClient.getAccountVerifyCredentials();
+        response.statusCode(200);
+    }
+
+    @Test
+    public void testUserBanner() {
+        long userId = 15904016;
+        ValidatableResponse response = this.tweetAPIClient.getUsersProfileBanner(userId);
+        response.statusCode(200);
+        System.out.println(response.extract().body().asPrettyString());
+    }
+
+    @Test
+    public void testAccountRemove() {
+        ValidatableResponse response = this.tweetAPIClient.postRemoveAccount();
+        response.statusCode(200);
+    }
+
+    @Test
+    public void testAccountSettings() {
+        ValidatableResponse response = this.tweetAPIClient.postAccountSetting();
+        response.statusCode(200);
+    }
+
+    @Test
+    public void testAccountUpdateProfile() {
+        ValidatableResponse response = this.tweetAPIClient.postAccountUpdateProfile();
+        response.statusCode(200);
+    }
+
+    @Test
+    public void testSaveSearchesLists() {
+        ValidatableResponse response = this.tweetAPIClient.postSavedSearchesList();
+        response.statusCode(200);
+    }
+
+    @Test
+    public void testSaveSearchesListsShow() {
+        ValidatableResponse response = this.tweetAPIClient.postSavedSearch("last day of training");
+        response.statusCode(200);
+    }
+
+    @Test
+    public void testSaveSearchesDelete() {
+        ValidatableResponse response = this.tweetAPIClient.postSavedSearchesDelete("1380663133761642496");
+        response.statusCode(200);
+    }
+
 }
+

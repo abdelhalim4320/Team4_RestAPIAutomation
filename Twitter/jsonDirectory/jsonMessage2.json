@@ -1,0 +1,13 @@
+{
+  "event": {
+    "type": "message_create",
+    "message_create": {
+      "target": {
+        "recipient_id": "1379417166940884992"
+      },
+      "message_data": {
+        "text": "you need to go vacation"
+      }
+    }
+  }
+}
