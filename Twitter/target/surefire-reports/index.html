@@ -1,0 +1,1248 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />
+    <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <br/>
+      <span class="top-banner-font-1">1 suite, 7 failed tests</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
+          <img src="collapseall.gif" class="collapse-all-icon">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" panel-name="suite-Surefire_suite" class="navigator-link">
+              <span class="suite-name border-failed">Surefire suite</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" panel-name="test-xml-Surefire_suite" class="navigator-link ">
+                    <span>[unset file name]</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="testlist-Surefire_suite" class="navigator-link ">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="group-Surefire_suite" class="navigator-link ">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="times-Surefire_suite" class="navigator-link ">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="reporter-Surefire_suite" class="navigator-link ">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="ignored-methods-Surefire_suite" class="navigator-link ">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="chronological-Surefire_suite" class="navigator-link ">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">46 methods, 7 failed,   39 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Surefire_suite" class="hide-methods failed suite-Surefire_suite"> (hide)</a> <!-- hide-methods failed suite-Surefire_suite -->
+                      <a href="#" panel-name="suite-Surefire_suite" class="show-methods failed suite-Surefire_suite"> (show)</a> <!-- show-methods failed suite-Surefire_suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Surefire_suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tweettest.TweetAPIClientTest" class="method navigator-link" hash-for-method="testCannotDeleteCustomProfiles">testCannotDeleteCustomProfiles</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tweettest.TweetAPIClientTest" class="method navigator-link" hash-for-method="testDestroyCollections">testDestroyCollections</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tweettest.TweetAPIClientTest" class="method navigator-link" hash-for-method="testGetRetweet">testGetRetweet</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tweettest.TweetAPIClientTest" class="method navigator-link" hash-for-method="testGetUserTimeLine">testGetUserTimeLine</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tweettest.TweetAPIClientTest" class="method navigator-link" hash-for-method="testGetUserTimeTweet">testGetUserTimeTweet</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tweettest.TweetAPIClientTest" class="method navigator-link" hash-for-method="testRetweet">testRetweet</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tweettest.TweetAPIClientTest" class="method navigator-link" hash-for-method="testUserCanNotTweetTheSameTweetTwiceInARow">testUserCanNotTweetTheSameTweetTwiceInARow</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Surefire_suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Surefire_suite" class="hide-methods passed suite-Surefire_suite"> (hide)</a> <!-- hide-methods passed suite-Surefire_suite -->
+                      <a href="#" panel-name="suite-Surefire_suite" class="show-methods passed suite-Surefire_suite"> (show)</a> <!-- show-methods passed suite-Surefire_suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Surefire_suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tweettest.TweetAPIClientTest" class="method navigator-link" hash-for-method="testCannotDeleteSearchTwice">testCannotDeleteSearchTwice</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tweettest.TweetAPIClientTest" class="method navigator-link" hash-for-method="testCannotGetCustomProfilesList">testCannotGetCustomProfilesList</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tweettest.TweetAPIClientTest" class="method navigator-link" hash-for-method="testCreateCollections">testCreateCollections</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tweettest.TweetAPIClientTest" class="method navigator-link" hash-for-method="testCreateFavoriteGif">testCreateFavoriteGif</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tweettest.TweetAPIClientTest" class="method navigator-link" hash-for-method="testCreateFavoriteTweet">testCreateFavoriteTweet</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tweettest.TweetAPIClientTest" class="method navigator-link" hash-for-method="testCreateList">testCreateList</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tweettest.TweetAPIClientTest" class="method navigator-link" hash-for-method="testCreateSearch">testCreateSearch</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tweettest.TweetAPIClientTest" class="method navigator-link" hash-for-method="testDeleteMessage">testDeleteMessage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tweettest.TweetAPIClientTest" class="method navigator-link" hash-for-method="testDeleteProfileBanner">testDeleteProfileBanner</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tweettest.TweetAPIClientTest" class="method navigator-link" hash-for-method="testDeleteSearch">testDeleteSearch</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tweettest.TweetAPIClientTest" class="method navigator-link" hash-for-method="testDeleteTweet">testDeleteTweet</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tweettest.TweetAPIClientTest" class="method navigator-link" hash-for-method="testDestroyFavoriteTweet">testDestroyFavoriteTweet</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tweettest.TweetAPIClientTest" class="method navigator-link" hash-for-method="testGetAccountSettings">testGetAccountSettings</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tweettest.TweetAPIClientTest" class="method navigator-link" hash-for-method="testGetBlockList">testGetBlockList</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tweettest.TweetAPIClientTest" class="method navigator-link" hash-for-method="testGetCustomProfiles">testGetCustomProfiles</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tweettest.TweetAPIClientTest" class="method navigator-link" hash-for-method="testGetFriendsList">testGetFriendsList</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tweettest.TweetAPIClientTest" class="method navigator-link" hash-for-method="testGetListMembers">testGetListMembers</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tweettest.TweetAPIClientTest" class="method navigator-link" hash-for-method="testGetLists">testGetLists</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tweettest.TweetAPIClientTest" class="method navigator-link" hash-for-method="testGetName">testGetName</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tweettest.TweetAPIClientTest" class="method navigator-link" hash-for-method="testGetProfileBanner">testGetProfileBanner</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tweettest.TweetAPIClientTest" class="method navigator-link" hash-for-method="testGetSubscribers">testGetSubscribers</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tweettest.TweetAPIClientTest" class="method navigator-link" hash-for-method="testHeaderValue">testHeaderValue</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tweettest.TweetAPIClientTest" class="method navigator-link" hash-for-method="testLookupTweets">testLookupTweets</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tweettest.TweetAPIClientTest" class="method navigator-link" hash-for-method="testPostLanguage">testPostLanguage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tweettest.TweetAPIClientTest" class="method navigator-link" hash-for-method="testPropertyFromResponse">testPropertyFromResponse</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tweettest.TweetAPIClientTest" class="method navigator-link" hash-for-method="testResponseTime">testResponseTime</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tweettest.TweetAPIClientTest" class="method navigator-link" hash-for-method="testSearchTweet">testSearchTweet</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tweettest.TweetAPIClientTest" class="method navigator-link" hash-for-method="testSearchTweets">testSearchTweets</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tweettest.TweetAPIClientTest" class="method navigator-link" hash-for-method="testUnRetweet">testUnRetweet</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tweettest.TweetAPIClientTest" class="method navigator-link" hash-for-method="testUpdateTweet">testUpdateTweet</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tweettest.TweetAPIClientTest" class="method navigator-link" hash-for-method="testUserCanBlockById">testUserCanBlockById</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tweettest.TweetAPIClientTest" class="method navigator-link" hash-for-method="testUserCanBlockByScreenName">testUserCanBlockByScreenName</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tweettest.TweetAPIClientTest" class="method navigator-link" hash-for-method="testUserCanTweetSuccessfully">testUserCanTweetSuccessfully</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tweettest.TweetAPIClientTest" class="method navigator-link" hash-for-method="testUserCanTweetSuccessfullyAddingRandomUUID">testUserCanTweetSuccessfullyAddingRandomUUID</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tweettest.TweetAPIClientTest" class="method navigator-link" hash-for-method="testUserCannotCreateFavoriteTweetTwice">testUserCannotCreateFavoriteTweetTwice</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tweettest.TweetAPIClientTest" class="method navigator-link" hash-for-method="testUserCannotDeleteMessage">testUserCannotDeleteMessage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tweettest.TweetAPIClientTest" class="method navigator-link" hash-for-method="testUserCannotGetCollections">testUserCannotGetCollections</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tweettest.TweetAPIClientTest" class="method navigator-link" hash-for-method="testUserCannotRetweetTwice">testUserCannotRetweetTwice</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tweettest.TweetAPIClientTest" class="method navigator-link" hash-for-method="testVerifyCredentials">testVerifyCredentials</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Surefire_suite -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-Surefire_suite" class="panel Surefire_suite">
+          <div class="suite-Surefire_suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">tweettest.TweetAPIClientTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCannotDeleteCustomProfiles">
+                  </a> <!-- testCannotDeleteCustomProfiles -->
+                  <span class="method-name">testCannotDeleteCustomProfiles</span>
+                  <div class="stack-trace">java.lang.IllegalStateException: Cannot invoke the path method because no content-type was present in the response and no default parser has been set.
+
+You can specify a default parser using e.g.:
+RestAssured.defaultParser = Parser.JSON;
+
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:105)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl$_path_closure5.doCall(RestAssuredResponseOptionsGroovyImpl.groovy:406)
+	at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl$_path_closure5.doCall(RestAssuredResponseOptionsGroovyImpl.groovy)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:263)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1035)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.call(PogoMetaClassSite.java:38)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:130)
+	at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl.findContentType(RestAssuredResponseOptionsGroovyImpl.groovy:496)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl.path(RestAssuredResponseOptionsGroovyImpl.groovy:405)
+	at io.restassured.internal.RestAssuredResponseOptionsImpl.path(RestAssuredResponseOptionsImpl.java:230)
+	at tweettest.TweetAPIClientTest.testCannotDeleteCustomProfiles(TweetAPIClientTest.java:402)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+... Removed 45 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testDestroyCollections">
+                  </a> <!-- testDestroyCollections -->
+                  <span class="method-name">testDestroyCollections</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at tweettest.TweetAPIClientTest.testDestroyCollections(TweetAPIClientTest.java:267)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetRetweet">
+                  </a> <!-- testGetRetweet -->
+                  <span class="method-name">testGetRetweet</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [RT @LKhemouche: This is the first time I tweet using Assured Rest API] but found [null]
+	at tweettest.TweetAPIClientTest.testGetRetweet(TweetAPIClientTest.java:163)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+... Removed 38 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetUserTimeLine">
+                  </a> <!-- testGetUserTimeLine -->
+                  <span class="method-name">testGetUserTimeLine</span>
+                  <div class="stack-trace">java.lang.AssertionError: Tweet did not match expected [I updated my using Assured Rest API11379117354064486411] but found [I updated my using Assured Rest API21379117354064486411]
+	at tweettest.TweetAPIClientTest.testGetUserTimeLine(TweetAPIClientTest.java:223)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+... Removed 36 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetUserTimeTweet">
+                  </a> <!-- testGetUserTimeTweet -->
+                  <span class="method-name">testGetUserTimeTweet</span>
+                  <div class="stack-trace">java.lang.AssertionError: Text did not not match expected [I updated my using Assured Rest API11379117354064486411] but found [I updated my using Assured Rest API21379117354064486411]
+	at tweettest.TweetAPIClientTest.testGetUserTimeTweet(TweetAPIClientTest.java:297)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+... Removed 36 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testRetweet">
+                  </a> <!-- testRetweet -->
+                  <span class="method-name">testRetweet</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [RT @LKhemouche: I am learning Rest API using Rest Assured and my First Tweet Same Tweet] but found [null]
+	at tweettest.TweetAPIClientTest.testRetweet(TweetAPIClientTest.java:126)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+... Removed 38 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testUserCanNotTweetTheSameTweetTwiceInARow">
+                  </a> <!-- testUserCanNotTweetTheSameTweetTwiceInARow -->
+                  <span class="method-name">testUserCanNotTweetTheSameTweetTwiceInARow</span>
+                  <div class="stack-trace">java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;403&gt; but was &lt;200&gt;.
+
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:126)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:134)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at io.restassured.internal.ValidatableResponseImpl.super$2$statusCode(ValidatableResponseImpl.groovy)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy:142)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy)
+	at tweettest.TweetAPIClientTest.testUserCanNotTweetTheSameTweetTwiceInARow(TweetAPIClientTest.java:47)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+... Removed 47 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-failed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">tweettest.TweetAPIClientTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCannotDeleteSearchTwice">
+                  </a> <!-- testCannotDeleteSearchTwice -->
+                  <span class="method-name">testCannotDeleteSearchTwice</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCannotGetCustomProfilesList">
+                  </a> <!-- testCannotGetCustomProfilesList -->
+                  <span class="method-name">testCannotGetCustomProfilesList</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCreateCollections">
+                  </a> <!-- testCreateCollections -->
+                  <span class="method-name">testCreateCollections</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCreateFavoriteGif">
+                  </a> <!-- testCreateFavoriteGif -->
+                  <span class="method-name">testCreateFavoriteGif</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCreateFavoriteTweet">
+                  </a> <!-- testCreateFavoriteTweet -->
+                  <span class="method-name">testCreateFavoriteTweet</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCreateList">
+                  </a> <!-- testCreateList -->
+                  <span class="method-name">testCreateList</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCreateSearch">
+                  </a> <!-- testCreateSearch -->
+                  <span class="method-name">testCreateSearch</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testDeleteMessage">
+                  </a> <!-- testDeleteMessage -->
+                  <span class="method-name">testDeleteMessage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testDeleteProfileBanner">
+                  </a> <!-- testDeleteProfileBanner -->
+                  <span class="method-name">testDeleteProfileBanner</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testDeleteSearch">
+                  </a> <!-- testDeleteSearch -->
+                  <span class="method-name">testDeleteSearch</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testDeleteTweet">
+                  </a> <!-- testDeleteTweet -->
+                  <span class="method-name">testDeleteTweet</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testDestroyFavoriteTweet">
+                  </a> <!-- testDestroyFavoriteTweet -->
+                  <span class="method-name">testDestroyFavoriteTweet</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetAccountSettings">
+                  </a> <!-- testGetAccountSettings -->
+                  <span class="method-name">testGetAccountSettings</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetBlockList">
+                  </a> <!-- testGetBlockList -->
+                  <span class="method-name">testGetBlockList</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetCustomProfiles">
+                  </a> <!-- testGetCustomProfiles -->
+                  <span class="method-name">testGetCustomProfiles</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetFriendsList">
+                  </a> <!-- testGetFriendsList -->
+                  <span class="method-name">testGetFriendsList</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetListMembers">
+                  </a> <!-- testGetListMembers -->
+                  <span class="method-name">testGetListMembers</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetLists">
+                  </a> <!-- testGetLists -->
+                  <span class="method-name">testGetLists</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetName">
+                  </a> <!-- testGetName -->
+                  <span class="method-name">testGetName</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetProfileBanner">
+                  </a> <!-- testGetProfileBanner -->
+                  <span class="method-name">testGetProfileBanner</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGetSubscribers">
+                  </a> <!-- testGetSubscribers -->
+                  <span class="method-name">testGetSubscribers</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testHeaderValue">
+                  </a> <!-- testHeaderValue -->
+                  <span class="method-name">testHeaderValue</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testLookupTweets">
+                  </a> <!-- testLookupTweets -->
+                  <span class="method-name">testLookupTweets</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testPostLanguage">
+                  </a> <!-- testPostLanguage -->
+                  <span class="method-name">testPostLanguage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testPropertyFromResponse">
+                  </a> <!-- testPropertyFromResponse -->
+                  <span class="method-name">testPropertyFromResponse</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testResponseTime">
+                  </a> <!-- testResponseTime -->
+                  <span class="method-name">testResponseTime</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testSearchTweet">
+                  </a> <!-- testSearchTweet -->
+                  <span class="method-name">testSearchTweet</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testSearchTweets">
+                  </a> <!-- testSearchTweets -->
+                  <span class="method-name">testSearchTweets</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testUnRetweet">
+                  </a> <!-- testUnRetweet -->
+                  <span class="method-name">testUnRetweet</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testUpdateTweet">
+                  </a> <!-- testUpdateTweet -->
+                  <span class="method-name">testUpdateTweet</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testUserCanBlockById">
+                  </a> <!-- testUserCanBlockById -->
+                  <span class="method-name">testUserCanBlockById</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testUserCanBlockByScreenName">
+                  </a> <!-- testUserCanBlockByScreenName -->
+                  <span class="method-name">testUserCanBlockByScreenName</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testUserCanTweetSuccessfully">
+                  </a> <!-- testUserCanTweetSuccessfully -->
+                  <span class="method-name">testUserCanTweetSuccessfully</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testUserCanTweetSuccessfullyAddingRandomUUID">
+                  </a> <!-- testUserCanTweetSuccessfullyAddingRandomUUID -->
+                  <span class="method-name">testUserCanTweetSuccessfullyAddingRandomUUID</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testUserCannotCreateFavoriteTweetTwice">
+                  </a> <!-- testUserCannotCreateFavoriteTweetTwice -->
+                  <span class="method-name">testUserCannotCreateFavoriteTweetTwice</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testUserCannotDeleteMessage">
+                  </a> <!-- testUserCannotDeleteMessage -->
+                  <span class="method-name">testUserCannotDeleteMessage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testUserCannotGetCollections">
+                  </a> <!-- testUserCannotGetCollections -->
+                  <span class="method-name">testUserCannotGetCollections</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testUserCannotRetweetTwice">
+                  </a> <!-- testUserCannotRetweetTwice -->
+                  <span class="method-name">testUserCannotRetweetTwice</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testVerifyCredentials">
+                  </a> <!-- testVerifyCredentials -->
+                  <span class="method-name">testVerifyCredentials</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+        </div> <!-- panel Surefire_suite -->
+        <div panel-name="test-xml-Surefire_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite thread-count=&quot;1&quot; name=&quot;Surefire suite&quot; verbose=&quot;0&quot;&gt;
+  &lt;test thread-count=&quot;1&quot; name=&quot;Surefire test&quot; verbose=&quot;0&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;tweettest.TweetAPIClientTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Surefire test --&gt;
+&lt;/suite&gt; &lt;!-- Surefire suite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-Surefire_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for Surefire suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Surefire test (1 class)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-Surefire_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for Surefire suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-Surefire_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for Surefire suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_Surefire_suite');
+function tableData_Surefire_suite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(46);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'testUserCanTweetSuccessfully')
+data.setCell(0, 2, 'tweettest.TweetAPIClientTest')
+data.setCell(0, 3, 2430);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'testResponseTime')
+data.setCell(1, 2, 'tweettest.TweetAPIClientTest')
+data.setCell(1, 3, 634);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'testUserCanNotTweetTheSameTweetTwiceInARow')
+data.setCell(2, 2, 'tweettest.TweetAPIClientTest')
+data.setCell(2, 3, 410);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'testGetUserTimeLine')
+data.setCell(3, 2, 'tweettest.TweetAPIClientTest')
+data.setCell(3, 3, 395);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'testGetUserTimeTweet')
+data.setCell(4, 2, 'tweettest.TweetAPIClientTest')
+data.setCell(4, 3, 380);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'testUserCanBlockByScreenName')
+data.setCell(5, 2, 'tweettest.TweetAPIClientTest')
+data.setCell(5, 3, 363);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'testPropertyFromResponse')
+data.setCell(6, 2, 'tweettest.TweetAPIClientTest')
+data.setCell(6, 3, 361);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'testGetAccountSettings')
+data.setCell(7, 2, 'tweettest.TweetAPIClientTest')
+data.setCell(7, 3, 353);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'testUserCanTweetSuccessfullyAddingRandomUUID')
+data.setCell(8, 2, 'tweettest.TweetAPIClientTest')
+data.setCell(8, 3, 352);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'testUserCanBlockById')
+data.setCell(9, 2, 'tweettest.TweetAPIClientTest')
+data.setCell(9, 3, 350);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'testGetSubscribers')
+data.setCell(10, 2, 'tweettest.TweetAPIClientTest')
+data.setCell(10, 3, 337);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'testDeleteTweet')
+data.setCell(11, 2, 'tweettest.TweetAPIClientTest')
+data.setCell(11, 3, 336);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'testUpdateTweet')
+data.setCell(12, 2, 'tweettest.TweetAPIClientTest')
+data.setCell(12, 3, 333);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'testUserCannotRetweetTwice')
+data.setCell(13, 2, 'tweettest.TweetAPIClientTest')
+data.setCell(13, 3, 330);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'testHeaderValue')
+data.setCell(14, 2, 'tweettest.TweetAPIClientTest')
+data.setCell(14, 3, 328);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'testCreateList')
+data.setCell(15, 2, 'tweettest.TweetAPIClientTest')
+data.setCell(15, 3, 322);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'testSearchTweet')
+data.setCell(16, 2, 'tweettest.TweetAPIClientTest')
+data.setCell(16, 3, 322);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'testGetLists')
+data.setCell(17, 2, 'tweettest.TweetAPIClientTest')
+data.setCell(17, 3, 319);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'testDestroyFavoriteTweet')
+data.setCell(18, 2, 'tweettest.TweetAPIClientTest')
+data.setCell(18, 3, 319);
+data.setCell(19, 0, 19)
+data.setCell(19, 1, 'testLookupTweets')
+data.setCell(19, 2, 'tweettest.TweetAPIClientTest')
+data.setCell(19, 3, 315);
+data.setCell(20, 0, 20)
+data.setCell(20, 1, 'testGetFriendsList')
+data.setCell(20, 2, 'tweettest.TweetAPIClientTest')
+data.setCell(20, 3, 313);
+data.setCell(21, 0, 21)
+data.setCell(21, 1, 'testUnRetweet')
+data.setCell(21, 2, 'tweettest.TweetAPIClientTest')
+data.setCell(21, 3, 310);
+data.setCell(22, 0, 22)
+data.setCell(22, 1, 'testCreateFavoriteGif')
+data.setCell(22, 2, 'tweettest.TweetAPIClientTest')
+data.setCell(22, 3, 310);
+data.setCell(23, 0, 23)
+data.setCell(23, 1, 'testCreateFavoriteTweet')
+data.setCell(23, 2, 'tweettest.TweetAPIClientTest')
+data.setCell(23, 3, 310);
+data.setCell(24, 0, 24)
+data.setCell(24, 1, 'testRetweet')
+data.setCell(24, 2, 'tweettest.TweetAPIClientTest')
+data.setCell(24, 3, 309);
+data.setCell(25, 0, 25)
+data.setCell(25, 1, 'testGetName')
+data.setCell(25, 2, 'tweettest.TweetAPIClientTest')
+data.setCell(25, 3, 305);
+data.setCell(26, 0, 26)
+data.setCell(26, 1, 'testGetBlockList')
+data.setCell(26, 2, 'tweettest.TweetAPIClientTest')
+data.setCell(26, 3, 304);
+data.setCell(27, 0, 27)
+data.setCell(27, 1, 'testCreateCollections')
+data.setCell(27, 2, 'tweettest.TweetAPIClientTest')
+data.setCell(27, 3, 302);
+data.setCell(28, 0, 28)
+data.setCell(28, 1, 'testSearchTweets')
+data.setCell(28, 2, 'tweettest.TweetAPIClientTest')
+data.setCell(28, 3, 298);
+data.setCell(29, 0, 29)
+data.setCell(29, 1, 'testGetRetweet')
+data.setCell(29, 2, 'tweettest.TweetAPIClientTest')
+data.setCell(29, 3, 296);
+data.setCell(30, 0, 30)
+data.setCell(30, 1, 'testVerifyCredentials')
+data.setCell(30, 2, 'tweettest.TweetAPIClientTest')
+data.setCell(30, 3, 293);
+data.setCell(31, 0, 31)
+data.setCell(31, 1, 'testCreateSearch')
+data.setCell(31, 2, 'tweettest.TweetAPIClientTest')
+data.setCell(31, 3, 292);
+data.setCell(32, 0, 32)
+data.setCell(32, 1, 'testGetListMembers')
+data.setCell(32, 2, 'tweettest.TweetAPIClientTest')
+data.setCell(32, 3, 290);
+data.setCell(33, 0, 33)
+data.setCell(33, 1, 'testPostLanguage')
+data.setCell(33, 2, 'tweettest.TweetAPIClientTest')
+data.setCell(33, 3, 289);
+data.setCell(34, 0, 34)
+data.setCell(34, 1, 'testDeleteProfileBanner')
+data.setCell(34, 2, 'tweettest.TweetAPIClientTest')
+data.setCell(34, 3, 286);
+data.setCell(35, 0, 35)
+data.setCell(35, 1, 'testCannotGetCustomProfilesList')
+data.setCell(35, 2, 'tweettest.TweetAPIClientTest')
+data.setCell(35, 3, 285);
+data.setCell(36, 0, 36)
+data.setCell(36, 1, 'testCannotDeleteSearchTwice')
+data.setCell(36, 2, 'tweettest.TweetAPIClientTest')
+data.setCell(36, 3, 285);
+data.setCell(37, 0, 37)
+data.setCell(37, 1, 'testDeleteSearch')
+data.setCell(37, 2, 'tweettest.TweetAPIClientTest')
+data.setCell(37, 3, 285);
+data.setCell(38, 0, 38)
+data.setCell(38, 1, 'testCannotDeleteCustomProfiles')
+data.setCell(38, 2, 'tweettest.TweetAPIClientTest')
+data.setCell(38, 3, 284);
+data.setCell(39, 0, 39)
+data.setCell(39, 1, 'testUserCannotCreateFavoriteTweetTwice')
+data.setCell(39, 2, 'tweettest.TweetAPIClientTest')
+data.setCell(39, 3, 283);
+data.setCell(40, 0, 40)
+data.setCell(40, 1, 'testDestroyCollections')
+data.setCell(40, 2, 'tweettest.TweetAPIClientTest')
+data.setCell(40, 3, 279);
+data.setCell(41, 0, 41)
+data.setCell(41, 1, 'testUserCannotDeleteMessage')
+data.setCell(41, 2, 'tweettest.TweetAPIClientTest')
+data.setCell(41, 3, 276);
+data.setCell(42, 0, 42)
+data.setCell(42, 1, 'testGetProfileBanner')
+data.setCell(42, 2, 'tweettest.TweetAPIClientTest')
+data.setCell(42, 3, 274);
+data.setCell(43, 0, 43)
+data.setCell(43, 1, 'testGetCustomProfiles')
+data.setCell(43, 2, 'tweettest.TweetAPIClientTest')
+data.setCell(43, 3, 270);
+data.setCell(44, 0, 44)
+data.setCell(44, 1, 'testUserCannotGetCollections')
+data.setCell(44, 2, 'tweettest.TweetAPIClientTest')
+data.setCell(44, 3, 264);
+data.setCell(45, 0, 45)
+data.setCell(45, 1, 'testDeleteMessage')
+data.setCell(45, 2, 'tweettest.TweetAPIClientTest')
+data.setCell(45, 3, 258);
+window.suiteTableData['Surefire_suite']= { tableData: data, tableDiv: 'times-div-Surefire_suite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 16 seconds</span>
+              <div id="times-div-Surefire_suite">
+              </div> <!-- times-div-Surefire_suite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-Surefire_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for Surefire suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-Surefire_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-Surefire_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">tweettest.TweetAPIClientTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUpTweetAPI</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">testUserCanTweetSuccessfully</span>
+                <span class="method-start">24 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testUserCanTweetSuccessfullyAddingRandomUUID</span>
+                <span class="method-start">2458 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testUserCanNotTweetTheSameTweetTwiceInARow</span>
+                <span class="method-start">2811 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testDeleteTweet</span>
+                <span class="method-start">3226 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testResponseTime</span>
+                <span class="method-start">3563 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testHeaderValue</span>
+                <span class="method-start">4197 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testPropertyFromResponse</span>
+                <span class="method-start">4526 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testGetAccountSettings</span>
+                <span class="method-start">4888 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testPostLanguage</span>
+                <span class="method-start">5241 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testSearchTweets</span>
+                <span class="method-start">5531 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testGetName</span>
+                <span class="method-start">5830 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testRetweet</span>
+                <span class="method-start">6136 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testUserCannotRetweetTwice</span>
+                <span class="method-start">6445 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testUpdateTweet</span>
+                <span class="method-start">6776 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testUnRetweet</span>
+                <span class="method-start">7110 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testGetRetweet</span>
+                <span class="method-start">7420 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testCreateFavoriteTweet</span>
+                <span class="method-start">7716 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testUserCannotCreateFavoriteTweetTwice</span>
+                <span class="method-start">8026 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testDestroyFavoriteTweet</span>
+                <span class="method-start">8309 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testLookupTweets</span>
+                <span class="method-start">8629 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testUserCannotDeleteMessage</span>
+                <span class="method-start">8945 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testGetUserTimeLine</span>
+                <span class="method-start">9221 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testCreateList</span>
+                <span class="method-start">9616 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testGetLists</span>
+                <span class="method-start">9938 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testCreateCollections</span>
+                <span class="method-start">10258 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testUserCannotGetCollections</span>
+                <span class="method-start">10560 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testDestroyCollections</span>
+                <span class="method-start">10825 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testSearchTweet</span>
+                <span class="method-start">11105 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testGetListMembers</span>
+                <span class="method-start">11427 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testGetUserTimeTweet</span>
+                <span class="method-start">11717 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testVerifyCredentials</span>
+                <span class="method-start">12098 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testGetProfileBanner</span>
+                <span class="method-start">12392 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testDeleteProfileBanner</span>
+                <span class="method-start">12666 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testCreateSearch</span>
+                <span class="method-start">12953 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testDeleteSearch</span>
+                <span class="method-start">13245 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testCannotDeleteSearchTwice</span>
+                <span class="method-start">13530 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testGetSubscribers</span>
+                <span class="method-start">13816 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testGetFriendsList</span>
+                <span class="method-start">14154 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testDeleteMessage</span>
+                <span class="method-start">14467 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testGetCustomProfiles</span>
+                <span class="method-start">14725 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testCannotGetCustomProfilesList</span>
+                <span class="method-start">14995 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testCannotDeleteCustomProfiles</span>
+                <span class="method-start">15281 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testCreateFavoriteGif</span>
+                <span class="method-start">15566 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testUserCanBlockByScreenName</span>
+                <span class="method-start">15876 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testUserCanBlockById</span>
+                <span class="method-start">16240 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testGetBlockList</span>
+                <span class="method-start">16590 ms</span>
+              </div> <!-- test-method -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+</html>

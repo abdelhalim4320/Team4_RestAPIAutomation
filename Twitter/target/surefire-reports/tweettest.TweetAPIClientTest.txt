@@ -1,0 +1,40 @@
+-------------------------------------------------------------------------------
+Test set: tweettest.TweetAPIClientTest
+-------------------------------------------------------------------------------
+Tests run: 46, Failures: 7, Errors: 0, Skipped: 0, Time elapsed: 17.16 s <<< FAILURE! - in tweettest.TweetAPIClientTest
+tweettest.TweetAPIClientTest.testUserCanNotTweetTheSameTweetTwiceInARow  Time elapsed: 0.415 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <403> but was <200>.
+
+	at tweettest.TweetAPIClientTest.testUserCanNotTweetTheSameTweetTwiceInARow(TweetAPIClientTest.java:47)
+
+tweettest.TweetAPIClientTest.testRetweet  Time elapsed: 0.304 s  <<< FAILURE!
+java.lang.AssertionError: expected [RT @LKhemouche: I am learning Rest API using Rest Assured and my First Tweet Same Tweet] but found [null]
+	at tweettest.TweetAPIClientTest.testRetweet(TweetAPIClientTest.java:126)
+
+tweettest.TweetAPIClientTest.testGetRetweet  Time elapsed: 0.291 s  <<< FAILURE!
+java.lang.AssertionError: expected [RT @LKhemouche: This is the first time I tweet using Assured Rest API] but found [null]
+	at tweettest.TweetAPIClientTest.testGetRetweet(TweetAPIClientTest.java:163)
+
+tweettest.TweetAPIClientTest.testGetUserTimeLine  Time elapsed: 0.486 s  <<< FAILURE!
+java.lang.AssertionError: Tweet did not match expected [I updated my using Assured Rest API11379117354064486411] but found [I updated my using Assured Rest API21379117354064486411]
+	at tweettest.TweetAPIClientTest.testGetUserTimeLine(TweetAPIClientTest.java:223)
+
+tweettest.TweetAPIClientTest.testDestroyCollections  Time elapsed: 0.28 s  <<< FAILURE!
+java.lang.NullPointerException
+	at tweettest.TweetAPIClientTest.testDestroyCollections(TweetAPIClientTest.java:267)
+
+tweettest.TweetAPIClientTest.testGetUserTimeTweet  Time elapsed: 0.478 s  <<< FAILURE!
+java.lang.AssertionError: Text did not not match expected [I updated my using Assured Rest API11379117354064486411] but found [I updated my using Assured Rest API21379117354064486411]
+	at tweettest.TweetAPIClientTest.testGetUserTimeTweet(TweetAPIClientTest.java:297)
+
+tweettest.TweetAPIClientTest.testCannotDeleteCustomProfiles  Time elapsed: 0.285 s  <<< FAILURE!
+java.lang.IllegalStateException: 
+Cannot invoke the path method because no content-type was present in the response and no default parser has been set.
+
+You can specify a default parser using e.g.:
+RestAssured.defaultParser = Parser.JSON;
+
+	at tweettest.TweetAPIClientTest.testCannotDeleteCustomProfiles(TweetAPIClientTest.java:402)
+

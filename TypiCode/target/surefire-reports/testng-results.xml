@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="13" passed="13" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2021-04-09T02:08:20 CDT" name="Surefire suite" finished-at="2021-04-09T02:08:26 CDT" duration-ms="6564">
+    <groups>
+    </groups>
+    <test started-at="2021-04-09T02:08:20 CDT" name="Surefire test" finished-at="2021-04-09T02:08:26 CDT" duration-ms="6564">
+      <class name="testpost.PostAPIClientTest">
+        <test-method is-config="true" signature="setUpPostsAPI()[pri:0, instance:testpost.PostAPIClientTest@7f3b84b8]" started-at="2021-04-09T02:08:20 CDT" name="setUpPostsAPI" finished-at="2021-04-09T02:08:20 CDT" duration-ms="7" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPostsAPI -->
+        <test-method signature="testCanGetPhotoUsingUrl()[pri:0, instance:testpost.PostAPIClientTest@7f3b84b8]" started-at="2021-04-09T02:08:20 CDT" name="testCanGetPhotoUsingUrl" finished-at="2021-04-09T02:08:22 CDT" duration-ms="2060" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCanGetPhotoUsingUrl -->
+        <test-method signature="testDeletePhotoUsingTitle()[pri:0, instance:testpost.PostAPIClientTest@7f3b84b8]" started-at="2021-04-09T02:08:22 CDT" name="testDeletePhotoUsingTitle" finished-at="2021-04-09T02:08:22 CDT" duration-ms="432" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDeletePhotoUsingTitle -->
+        <test-method signature="testDeletePost()[pri:0, instance:testpost.PostAPIClientTest@7f3b84b8]" started-at="2021-04-09T02:08:22 CDT" name="testDeletePost" finished-at="2021-04-09T02:08:23 CDT" duration-ms="420" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDeletePost -->
+        <test-method signature="testGetAlbumUsingTitle()[pri:0, instance:testpost.PostAPIClientTest@7f3b84b8]" started-at="2021-04-09T02:08:23 CDT" name="testGetAlbumUsingTitle" finished-at="2021-04-09T02:08:23 CDT" duration-ms="400" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetAlbumUsingTitle -->
+        <test-method signature="testGetAllPosts()[pri:0, instance:testpost.PostAPIClientTest@7f3b84b8]" started-at="2021-04-09T02:08:23 CDT" name="testGetAllPosts" finished-at="2021-04-09T02:08:23 CDT" duration-ms="292" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetAllPosts -->
+        <test-method signature="testGetPhotoUsingUrl()[pri:0, instance:testpost.PostAPIClientTest@7f3b84b8]" started-at="2021-04-09T02:08:23 CDT" name="testGetPhotoUsingUrl" finished-at="2021-04-09T02:08:24 CDT" duration-ms="237" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetPhotoUsingUrl -->
+        <test-method signature="testGetUsersUsingId()[pri:0, instance:testpost.PostAPIClientTest@7f3b84b8]" started-at="2021-04-09T02:08:24 CDT" name="testGetUsersUsingId" finished-at="2021-04-09T02:08:24 CDT" duration-ms="221" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetUsersUsingId -->
+        <test-method signature="testUserCanCreateAPostSuccessfully()[pri:0, instance:testpost.PostAPIClientTest@7f3b84b8]" started-at="2021-04-09T02:08:24 CDT" name="testUserCanCreateAPostSuccessfully" finished-at="2021-04-09T02:08:24 CDT" duration-ms="615" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUserCanCreateAPostSuccessfully -->
+        <test-method signature="testUserCanCreateAPostUsingPojoSuccessfully()[pri:0, instance:testpost.PostAPIClientTest@7f3b84b8]" started-at="2021-04-09T02:08:24 CDT" name="testUserCanCreateAPostUsingPojoSuccessfully" finished-at="2021-04-09T02:08:25 CDT" duration-ms="407" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUserCanCreateAPostUsingPojoSuccessfully -->
+        <test-method signature="testUserCanCreateTodos()[pri:0, instance:testpost.PostAPIClientTest@7f3b84b8]" started-at="2021-04-09T02:08:25 CDT" name="testUserCanCreateTodos" finished-at="2021-04-09T02:08:25 CDT" duration-ms="373" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUserCanCreateTodos -->
+        <test-method signature="testUserCanGetPostsUsingId()[pri:0, instance:testpost.PostAPIClientTest@7f3b84b8]" started-at="2021-04-09T02:08:25 CDT" name="testUserCanGetPostsUsingId" finished-at="2021-04-09T02:08:25 CDT" duration-ms="223" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUserCanGetPostsUsingId -->
+        <test-method signature="testUserCanPutAPostUsingPojoSuccessfully()[pri:0, instance:testpost.PostAPIClientTest@7f3b84b8]" started-at="2021-04-09T02:08:25 CDT" name="testUserCanPutAPostUsingPojoSuccessfully" finished-at="2021-04-09T02:08:26 CDT" duration-ms="419" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUserCanPutAPostUsingPojoSuccessfully -->
+        <test-method signature="testUserCanUploadPicture()[pri:0, instance:testpost.PostAPIClientTest@7f3b84b8]" started-at="2021-04-09T02:08:26 CDT" name="testUserCanUploadPicture" finished-at="2021-04-09T02:08:26 CDT" duration-ms="428" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUserCanUploadPicture -->
+      </class> <!-- testpost.PostAPIClientTest -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>

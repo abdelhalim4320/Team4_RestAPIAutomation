@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="1" name="Failed suite [Surefire suite]" verbose="0">
+  <test thread-count="1" name="Surefire test(failed)" verbose="0">
+    <classes>
+      <class name="tweettest.TweetAPIClientTest">
+        <methods>
+          <include name="testGetRetweet"/>
+          <include name="setUpTweetAPI"/>
+          <include name="testCannotDeleteCustomProfiles"/>
+          <include name="testGetUserTimeLine"/>
+          <include name="testUserCanNotTweetTheSameTweetTwiceInARow"/>
+          <include name="testGetUserTimeTweet"/>
+          <include name="testRetweet"/>
+          <include name="testDestroyCollections"/>
+        </methods>
+      </class> <!-- tweettest.TweetAPIClientTest -->
+    </classes>
+  </test> <!-- Surefire test(failed) -->
+</suite> <!-- Failed suite [Surefire suite] -->
