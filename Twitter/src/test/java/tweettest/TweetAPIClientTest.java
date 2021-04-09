@@ -1,14 +1,15 @@
 package tweettest;
 
+import ImageBaseMethods.ImageRoles;
 import io.restassured.response.ValidatableResponse;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Optional;
-import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import tweet.TweetAPIClient;
 
+import java.util.ArrayList;
 import java.util.UUID;
+import java.util.concurrent.atomic.AtomicReference;
 
 import static org.testng.Assert.assertEquals;
 
@@ -292,6 +293,7 @@ public class TweetAPIClientTest {
         String actualQuery = response.extract().body().path("[0].name");
         assertEquals(actualQuery, expectedQuery, "Query did not not match");
     }
+
     @Test(priority = 27)
     public void testPostSavedSearchesCreate() {
         String expectedQuery = "food";
@@ -299,6 +301,224 @@ public class TweetAPIClientTest {
         System.out.println(response.extract().body().asPrettyString());
         String actualQuery = response.extract().body().path("query");
         assertEquals(actualQuery, expectedQuery, "Query did not not match");
-}
+    }
 
+    @Test(priority = 28)
+    public void testGetSearchTweets() {
+        String expectedText = "...some other resources if you as a dietitian or health professional or consumer want to learn more about how food… https://t.co/eoQkhkYE9J";
+        ValidatableResponse response = this.tweetAPIClient.getSearchTweets("@food");
+        System.out.println(response.extract().body().asPrettyString());
+        String actualText = response.extract().body().path("statuses[0].text");
+        assertEquals(actualText, expectedText, "Text did not not match");
+    }
+
+    @Test(priority = 29)
+    public void testGetUserMutesByID() {
+        ArrayList<String> expectedText = new ArrayList<>();
+        ValidatableResponse response = this.tweetAPIClient.getUserMutesByID("true");
+        System.out.println(response.extract().body().asPrettyString());
+        ArrayList actualText = response.extract().body().path("ids[]");
+        assertEquals(actualText, expectedText, "Text did not not match");
+
+    }
+
+    @Test(priority = 30)
+    public void testPostMutesUsersCreate() {
+        String expectedName = "kylegriffin1";
+        ValidatableResponse response = this.tweetAPIClient.postMuteUsersCreate(32871086l);
+        System.out.println(response.extract().body().asPrettyString());
+        String actualName = response.extract().body().path("screen_name");
+        assertEquals(actualName, expectedName, "Query did not not match");
+
+    }
+
+    @Test(priority = 31)
+    public void testPostMutesUsersDestroy() {
+        String expectedName = "BarackObama";
+        ValidatableResponse response = this.tweetAPIClient.postMuteUsersDestroy(813286l);
+        System.out.println(response.extract().body().asPrettyString());
+        String actualName = response.extract().body().path("screen_name");
+        assertEquals(actualName, expectedName, "Query did not not match");
+
+    }
+
+    @Test(priority = 32)
+    public void testPostUsersReportSpam() {
+        String expectedName = "kylegriffin1";
+        ValidatableResponse response = this.tweetAPIClient.postUsersReportSpam(32871086l);
+        System.out.println(response.extract().body().asPrettyString());
+        String actualName = response.extract().body().path("screen_name");
+        assertEquals(actualName, expectedName, "Query did not not match");
+    }
+
+    @Test(priority = 33)
+    public void testPostBlockUsersCreate() {
+        String expectedName = "AdamMGrant";
+        ValidatableResponse response = this.tweetAPIClient.postBlockUsersCreate("AdamMGrant");
+        System.out.println(response.extract().body().asPrettyString());
+        String actualName = response.extract().body().path("screen_name");
+        assertEquals(actualName, expectedName, "Name did not not match");
+    }
+
+    @Test(priority = 34)
+    public void testPostBlockUsersDestroy() {
+        String expectedName = "AdamMGrant";
+        ValidatableResponse response = this.tweetAPIClient.postBlockUsersDestroy("AdamMGrant");
+        System.out.println(response.extract().body().asPrettyString());
+        String actualName = response.extract().body().path("screen_name");
+        assertEquals(actualName, expectedName, "Name did not not match");
+
+    }
+
+    @Test(priority = 35)
+    public void testGetConfigurationHelp() {
+        String expectedQuery = "about";
+        ValidatableResponse response = this.tweetAPIClient.getConfigurationHelp();
+        System.out.println(response.extract().body().asPrettyString());
+        String actualQuery = response.extract().body().path("non_username_paths[0].");
+        assertEquals(actualQuery, expectedQuery, "Query did not not match");
+    }
+
+    @Test(priority = 36)
+    public void testGetLanguagesHelp() {
+        String expectedLanguage = "Urdu";
+        ValidatableResponse response = this.tweetAPIClient.getLanguagesHelp();
+        System.out.println(response.extract().body().asPrettyString());
+        String actualLanguage = response.extract().body().path("[0].name");
+        assertEquals(actualLanguage, expectedLanguage, "Language did not not match");
+
+    }//Get application rate limit status
+
+    @Test(priority = 37)
+    public void testGetApplicationRateLimitStatus() {
+        String expectedLanguage = "1375997679377977346-TqMyeNx92vrPqAdaHQlguwHZRBTU4g";
+        ValidatableResponse response = this.tweetAPIClient.getApplicationRateLimitStatus();
+        System.out.println(response.extract().body().asPrettyString());
+        String actualLanguage = response.extract().body().path("rate_limit_context.access_token");
+        assertEquals(actualLanguage, expectedLanguage, "Language did not not match");
+
+    }//get user accounts search
+
+    @Test(priority = 38)
+    public void testGetUserSearch() {
+        String expectedText = "Dad, husband, President, citizen.";
+        ValidatableResponse response = this.tweetAPIClient.getUsersSearch("Barack Obama");
+        System.out.println(response.extract().body().asPrettyString());
+        String actualText = response.extract().body().path("[0].description");
+        assertEquals(actualText, expectedText, "Text did not not match");
+
+    }//get trends available
+
+    @Test(priority = 39)
+    public void testGetTrendsAvailable() {
+        String expectedText = "Worldwide";
+        ValidatableResponse response = this.tweetAPIClient.getTrendsAvailable();
+        System.out.println(response.extract().body().asPrettyString());
+        String actualText = response.extract().body().path("[0].name");
+        assertEquals(actualText, expectedText, "Text did not not match");
+    }
+    //get trends in a specific area
+    @Test(priority = 40)
+    public void testGetTrendsPlaces() {
+        String expectedText = "#FearlessTaylorsVersion";
+        ValidatableResponse response = this.tweetAPIClient.getTrendsInLocation(1);
+        System.out.println(response.extract().body().asPrettyString());
+        String actualText = response.extract().body().path("[0].trends[0].name");
+        assertEquals(actualText, expectedText, "Text did not not match");
+
+    }//get geo searches
+    @Test(priority = 41)
+    public void testGetGeoSearches() {
+        String expectedText = "neighborhood";
+        ValidatableResponse response = this.tweetAPIClient.getGeoSearch("food");
+        System.out.println(response.extract().body().asPrettyString());
+        String actualText = response.extract().body().path("query.params.granularity");
+        assertEquals(actualText, expectedText, "Text did not not match");
+
+    }//get blocks list
+    @Test(priority = 42)
+    public void testGetBlocksList() {
+        String expectedText = "Adam H. Johnson";
+        ValidatableResponse response = this.tweetAPIClient.getBlocksList();
+        System.out.println(response.extract().body().asPrettyString());
+        String actualText = response.extract().body().path("users[0].name");
+        assertEquals(actualText, expectedText, "Text did not not match");
+
+    }//get blocks ID
+    @Test(priority = 43)
+    public void testGetBlocksID() {
+        ValidatableResponse response = this.tweetAPIClient.getBlocksID();
+        System.out.println(response.extract().body().asPrettyString());
+        int actualText = response.extract().body().path("ids[0]");
+        Assert.assertFalse(Boolean.parseBoolean(String.valueOf(actualText)));
+
+    }//get collections list
+    @Test(priority = 44)
+    public void testGetCollectionsList() {
+        ValidatableResponse response = this.tweetAPIClient.getCollectionsList(1375997679377977346l);
+        System.out.println(response.extract().body().asPrettyString());
+        String actualText = response.extract().body().path("collection_url");
+        Assert.assertFalse(Boolean.parseBoolean(actualText));
+    }
+    //post friendship create
+    @Test(priority = 45)
+    public void testPostFriendshipCreate() {
+        String expectedName = "Former Congresswoman. Author of She Will Rise: https://t.co/3CSqe0jRHB. Founder of HER Time PAC: @hertime2020. Host of @_naked_politics podcast. Not done yet.";
+        ValidatableResponse response = this.tweetAPIClient.postFriendshipCreate("@KatieHill4CA");
+        System.out.println(response.extract().body().asPrettyString());
+        String actualName = response.extract().body().path("description");
+        assertEquals(actualName,expectedName);
+    }
+    //post friendship update
+    @Test(priority = 46)
+    public void testPostFriendshipUpdate() {
+        String expectedName = "Pritam85167928";
+        ValidatableResponse response = this.tweetAPIClient.postFriendshipUpdate("@KatieHill4CA");
+        System.out.println(response.extract().body().asPrettyString());
+        String actualName = response.extract().body().path("relationship.source.screen_name");
+        assertEquals(actualName,expectedName);
+
+    }//post friendship destroy
+    @Test(priority = 47)
+    public void testPostFriendshipDestroy() {
+        String expectedName = "Washington, DC";
+        ValidatableResponse response = this.tweetAPIClient.postFriendshipDestroy("@KatieHill4CA");
+        System.out.println(response.extract().body().asPrettyString());
+        String actualName = response.extract().body().path("location");
+        assertEquals(actualName,expectedName);
+
+    }
+    @Test(priority = 48)
+    public void testGetFriendshipNoRetweetsID() {
+        ArrayList<Integer> x = new ArrayList<>();
+        x.add(813286);
+        AtomicReference<ArrayList<Integer>> expectedName = new AtomicReference<>(x);
+        ValidatableResponse response = this.tweetAPIClient.getFriendshipsNoRetweets();
+        System.out.println(response.extract().body().asPrettyString());
+        ArrayList<Integer> actualName = response.extract().body().path("");
+        assertEquals(actualName, expectedName.get());
+
+    }//get friendship lookup
+    @Test(priority = 49)
+    public void testGetFriendshipLookUp() {
+        String expectedText = "Barack Obama";
+        ValidatableResponse response = this.tweetAPIClient.getFriendshipsLookUp("@BarackObama");
+        System.out.println(response.extract().body().asPrettyString());
+        String actualText = response.extract().body().path("[0].name");
+        assertEquals(actualText, expectedText, "Text did not not match");
+    }
+    @Test(priority = 50)
+    public void testGetUsersShow() {
+        String expectedText = "Pritam";
+        ValidatableResponse response = this.tweetAPIClient.getUsersShow("@Pritam85167928");
+        System.out.println(response.extract().body().asPrettyString());
+        String actualText = response.extract().body().path("name");
+        assertEquals(actualText, expectedText, "Text did not not match");
+
+    }
+    @Test
+    public void testUploadImage(){
+        ValidatableResponse response = this.tweetAPIClient.postCreateImageUpload(ImageRoles.pleaseWork());
+        System.out.println(response.extract().body().asPrettyString());
+    }
 }
