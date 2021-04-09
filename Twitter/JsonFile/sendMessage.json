@@ -1,0 +1,14 @@
+{
+  "event": {
+    "type": "message_create",
+    "message_create": {
+      "target": {
+        "recipient_id": "1303208831120560128"
+      },
+      "message_data": {
+        "text": "azul non more testing , this is coming from intellij lol!"
+      }
+    }
+  }
+}
+

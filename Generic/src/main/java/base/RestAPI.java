@@ -14,11 +14,13 @@ public class RestAPI {
     protected Properties properties;
     protected InputStream inputStream;
     protected String baseUrl;
-    protected String apiVersion="1.1";
+    protected String imageBaseUrl;
+    protected String apiVersion = "1.1";
 
     public RestAPI() {
         //https://api.twitter.com/1.1/statuses/update.json
-        this.baseUrl = "https://api.twitter.com/"+this.apiVersion;
+        this.baseUrl = "https://api.twitter.com/" + this.apiVersion;
+        this.imageBaseUrl = "https://upload.twitter.com/1.1";
         this.properties = new Properties();
         inputStream = null;
         try {
@@ -42,14 +44,6 @@ public class RestAPI {
 
 
     }
-
-
-
-
-
-
-
-
 
 
 }
