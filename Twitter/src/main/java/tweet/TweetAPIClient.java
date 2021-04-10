@@ -14,6 +14,7 @@ import static io.restassured.RestAssured.given;
 
 public class TweetAPIClient extends RestAPI {
 
+    private final String ID_JSON = ".json";
     private final String CREATE_TWEET_ENDPOINT = "/statuses/update.json";
     private final String DELETE_TWEET_ENDPOINT = "/statuses/destroy.json";
     private final String GET_USER_TWEET_ENDPOINT = "/statuses/home_timeline.json";
@@ -47,6 +48,8 @@ public class TweetAPIClient extends RestAPI {
     private final String POST_PROFILE_IMAGE_ENDPOINT = "/account/update_profile_image.json";
     private final String POST_MEDIA_ENDPOINT = "/media/upload.json";
     private final String POST_WELCOME_MESSAGE = "/direct_messages/welcome_messages/new.json";
+    private final String POST_STATUES_ENDPOINT = "/statuses/update.json";
+    private final String DELETE_STATUES_ENDPOINT = "/statuses/destroy/";
 
     // GET all Tweet Information
     public ValidatableResponse getUserTimeTweet() {
@@ -324,5 +327,17 @@ public class TweetAPIClient extends RestAPI {
                 .body(inputStream)
                 .when().post(this.baseUrl + this.POST_WELCOME_MESSAGE)
                 .then();
+    }
+    public ValidatableResponse postStatus(String Status) {
+        return given().auth().oauth(this.apiKey, this.apiSecretKey, this.accessToken, this.accessTokenSecret)
+                .queryParam("status", Status)
+                .when().post(this.baseUrl + this.POST_STATUES_ENDPOINT)
+                .then().log().all().assertThat().statusCode(200);
+    }
+    public ValidatableResponse deleteStatus(String tweetId) {
+        return given().auth().oauth(this.apiKey, this.apiSecretKey, this.accessToken, this.accessTokenSecret)
+                .queryParam("id_str", tweetId)
+                .when().post(this.baseUrl + this.DELETE_STATUES_ENDPOINT + tweetId + ID_JSON)
+                .then().log().all().assertThat().statusCode(200);
     }
 }

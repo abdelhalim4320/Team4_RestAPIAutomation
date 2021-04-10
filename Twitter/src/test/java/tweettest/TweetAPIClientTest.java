@@ -217,11 +217,14 @@ public class TweetAPIClientTest {
 
     @Test
     public void testStatusFilter() {
+
         ValidatableResponse response = this.tweetAPIClient.getFilter();
+
     }
 
     @Test
     public void testStatusSimple() {
+
         ValidatableResponse response = this.tweetAPIClient.getStatuesSimple();
     }
 
@@ -299,6 +302,13 @@ public class TweetAPIClientTest {
         ValidatableResponse response = this.tweetAPIClient.postSavedSearchesDelete("1380663133761642496");
         response.statusCode(200);
     }
-
+    @Test
+    public void testPostStatus() {
+        this.tweetAPIClient.postStatus("post status");
+    }
+    @Test
+    public void testDeleteStatus() {
+        this.tweetAPIClient.deleteStatus("1380902564355584004");
+    }
 }
 
