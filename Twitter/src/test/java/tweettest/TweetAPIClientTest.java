@@ -448,11 +448,10 @@ public class TweetAPIClientTest {
         String expectedName=response.extract().body().path( "name");
         Assert.assertEquals(expectedName, actualName);
     }
-    // create a tweet with media
+    // update banner
     @Test(enabled = true)
-    public void testCreateTweetWithBanner() {
-        ValidatableResponse response = this.tweetAPIClient.updateProfileBanner(LoadMedia.profileImage()
-        );
+    public void testUpdateProfileBanner() {
+        ValidatableResponse response = this.tweetAPIClient.updateProfileBanner(LoadMedia.bannerImage());
         System.out.println(response.extract().body().asPrettyString());
         response.statusCode(200);
     }
