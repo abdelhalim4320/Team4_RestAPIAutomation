@@ -1,0 +1,13 @@
+{
+  "event": {
+    "type": "message_create",
+    "message_create": {
+      "target": {
+        "recipient_id": "1379258974374133765"
+      },
+      "message_data": {
+        "text": "Hello this is me!did you get this message?"
+      }
+    }
+  }
+}
