@@ -23,17 +23,11 @@ public class TweetAPIClientTest {
 
     @Test
     public void testUserCanTweetSuccessfully() {
-        // User sent a tweet
         String tweet = "retweet and UnreTweet@eashaarap";
-        //+ UUID.randomUUID().toString()
         ValidatableResponse response = this.tweetAPIClient.createTweet(tweet);
-        // System.out.println(response.extract().body().asPrettyString());
-        // Verify that the tweet is successful
         response.statusCode(200);
-        // Verity tweet value
         String actualTweet = response.extract().body().path("text");
-        // Long id= response.extract().body().path("id");
-        //System.out.println(id);
+
         Assert.assertEquals(actualTweet, tweet, "Tweet is not match");
     }
 
@@ -52,7 +46,6 @@ public class TweetAPIClientTest {
         Assert.assertNotEquals("403", 200);
     }
 
-
     @Test
     public void testDeleteTweet() {
         String tweet = "We are learning Rest API using Rest Assured and our First Tweet82d120dd-9045-44f3-a3c9-8720409fae20";
@@ -60,10 +53,7 @@ public class TweetAPIClientTest {
         deleteResponse.statusCode(200);
         String actualTweet = deleteResponse.extract().body().path("text");
         Assert.assertEquals(tweet, actualTweet);
-
     }
-
-
     @Test(enabled = true)
     public void testResponseTime() {
         ValidatableResponse response = this.tweetAPIClient.responseTime();
@@ -90,7 +80,6 @@ public class TweetAPIClientTest {
         //String actualTweet = response.extract().body().path("text");
         //Assert.assertEquals(actualTweet, tweet, "Tweet is not match");
     }
-
     @Test
     public void testRetweet() {
         String tweet = "We are learning Rest API using Rest Assured and our First Tweet Same Tweet";
@@ -455,7 +444,6 @@ public class TweetAPIClientTest {
         System.out.println(response.extract().body().asPrettyString());
         response.statusCode(200);
     }
-
     @Test
     public void testSendDirectMessage1() throws FileNotFoundException {
         ValidatableResponse response = this.tweetAPIClient.sendDirectMessage1();
